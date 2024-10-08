@@ -1,0 +1,35 @@
+services:
+   webapp: # webbapp service
+      image: robberto2003/webapp:latest
+      ports:
+         - "3000:3000"
+      volumes:
+         - ./database:/webapp/database
+      environment:
+         MYSQL_URL: mysql://root:root@database:3306/my_database # sql connectie
+      depends_on:
+         - database # Extra
+
+   database: # MySQL database service
+      image: mysql:latest
+      environment:
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: my_database
+         MYSQL_USER: robbe
+         MYSQL_PASSWORD: passwd
+      ports:
+         - "3307:3306"
+      volumes:
+         - mysql_data:/var/lib/mysql
+
+   tests: # Test service
+      image: webapp
+      environment:
+         API_URL: http://webapp:3000
+      depends_on:
+         - webapp
+         - database
+      command: yarn test
+
+volumes:
+   mysql_data:

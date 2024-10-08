@@ -1,0 +1,9 @@
+services:
+   webapp: # webbapp service
+      image: webapp # Image uit Dockerfile gebruiken
+      ports:
+         - "3000:3000" # map port 3000 van host port op de port 3000 in container
+      volumes:
+         - ./database:/webapp/database
+   
+   
