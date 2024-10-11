@@ -9,7 +9,7 @@
 	"scripts": {
 		"start": "node src/index.js",
 		"test": "mocha tests/animals.spec.js",
-		"lint": "eslint ."
+		"lint": "eslint . "
 	},
 	"dependencies": {
 		"@fakerjs/animal": "^2.2.0",
@@ -22,8 +22,11 @@
 		"sqlite3": "^5.1.7"
 	},
 	"devDependencies": {
+		"@eslint/eslintrc": "^3.1.0",
+		"@eslint/js": "^9.12.0",
 		"chai": "^5.1.1",
 		"eslint": "^9.8.0",
+		"globals": "^15.11.0",
 		"mocha": "^10.7.0",
 		"node-fetch": "^3.3.2"
 	}
