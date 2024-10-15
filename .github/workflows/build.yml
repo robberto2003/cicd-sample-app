@@ -10,7 +10,7 @@
         runs-on: ubuntu-latest
         steps:
            - name: Check out repository code
-             uses: actions/checkout@v3
+             uses: actions/checkout@v2 # Expres Downgrade van v3 naar v2
   
            - name: Set up Node.js 20
              uses: actions/setup-node@v3
