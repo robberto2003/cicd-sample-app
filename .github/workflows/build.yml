@@ -19,13 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-        working-directory: ./my-new-webapp
 
       - name: Lint the codebase
         run: yarn lint
         env:
           ESLINT_USE_FLAT_CONFIG: false
-        working-directory: ./my-new-webapp
 
   build:
     runs-on: ubuntu-latest
