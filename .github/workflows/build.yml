@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-        working-directory: ./webapp
+        working-directory: ./my-new-webapp
 
       - name: Lint the codebase
         run: yarn lint
