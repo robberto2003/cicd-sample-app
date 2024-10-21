@@ -25,7 +25,7 @@ jobs:
         run: yarn lint
         env:
           ESLINT_USE_FLAT_CONFIG: false
-        working-directory: ./webapp
+        working-directory: ./my-new-webapp
 
   build:
     runs-on: ubuntu-latest
